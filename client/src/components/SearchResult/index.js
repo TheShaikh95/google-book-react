@@ -16,7 +16,7 @@ const SearchResult = props => {
                 </Col>
                 <Col size="10" className="pl-2">
                   <h3 className="bookTitle">{book.title}</h3>
-                  <h4 className="bookAuthor">{book.author}</h4>
+                  <h4 className="bookAuthor">{book.authors}</h4>
                   <p className="bookDescription pr-3">{book.description}</p>
                 </Col>
               </Row>
