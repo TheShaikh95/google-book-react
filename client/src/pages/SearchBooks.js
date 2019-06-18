@@ -10,7 +10,6 @@ class SearchBooks extends Component {
     search: "",
     books: [],
     error: "",
-    message: ""
   };
 
   handleInputChange = event => {
@@ -35,26 +34,27 @@ class SearchBooks extends Component {
               key: result.id,
               id: result.id,
               title: result.volumeInfo.title,
-              author: result.volumeInfo.authors,
+              authors: result.volumeInfo.authors,
               description: result.volumeInfo.description,
               image: result.volumeInfo.imageLinks.thumbnail,
               link: result.volumeInfo.infoLink
             }
             return result;
           })
-          this.setState({ books: results, error: "" })
+          this.setState({ books: results, search: ""})
         }
       })
       .catch(err => this.setState({ error: err.items }));
   }
 
+
   handleSavedButton = event => {
     event.preventDefault();
     let savedBooks = this.state.books.filter(book => book.id === event.target.id)
     API.saveBook(savedBooks)
-      .then(() => this.getBooks())
-      .catch(err => console.log(err))
-  }
+      .then(console.log(savedBooks))
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <Container fluid>

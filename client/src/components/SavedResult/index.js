@@ -5,7 +5,8 @@ import "./style.css";
 const SavedResult = props => {
   return (
     <Container>
-      <h3>Saved Books</h3>{props.savedBooks.map(savedbook => {
+      <h3>Saved Books</h3>
+      {props.savedBooks.map(savedbook => {
         return (
           <div>
             <div className="card mb-2">
