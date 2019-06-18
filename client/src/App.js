@@ -5,6 +5,7 @@ import Search from "./pages/Search";
 // import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer"
+import Jumbotron from "./components/Jumbotron";
 // import "./App.css"
 
 
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        <Jumbotron/>
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/saved" component={Saved}/>
