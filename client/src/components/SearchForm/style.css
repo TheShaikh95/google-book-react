@@ -2,3 +2,7 @@
   background-color: #A65712;
   margin-bottom: 8%;
 }
+
+.submitBtn:hover {
+  background-color: #73160E;
+}
