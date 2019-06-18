@@ -1,3 +1,12 @@
 .navbar {
-  background-color: #98B738
+  background-color: #A65369
+}
+
+a {
+  color: #FFFFFF;
+  font-size: 14pt;
+}
+
+a:hover {
+  color: rgb(160, 157, 157)
 }

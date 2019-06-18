@@ -4,7 +4,7 @@ import { Row, Col } from "../Grid"
 
 const SavedResult = props => {
   return (props.savedBooks.length === 0) ? (
-    <div className="card">
+    <div className="card border-0">
       <div className="card-body player">
         <div className="article">
           <h3>Books that You Saved</h3>
@@ -12,7 +12,7 @@ const SavedResult = props => {
       </div>
     </div>
   ) : (
-      <div className="card">
+      <div className="card border-0">
         <div className="card-body player">
           <div className="article">
             <h3>Books that You Saved</h3>
@@ -20,7 +20,7 @@ const SavedResult = props => {
               return (
                 <li className="saved-list list-group-item">
                   <Row className="SearchResult" id={savedbook.title + "Card"} key={savedbook._id}>
-                    {/* col-3 show image of the book */}
+                    {/* col-2 show image of the book */}
                     <Col size="2" className="bookImage">
                       <img src={savedbook.image} alt={savedbook.title} />
                     </Col>

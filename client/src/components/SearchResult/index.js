@@ -1,10 +1,9 @@
 import React from "react";
-// import "./style.css";
 import { Row, Col } from "../Grid"
 
 const SearchResult = props => {
   return (props.books.length === 0) ? (
-    <div className="card">
+    <div className="card border-0">
       <div className="card-body player">
         <div className="article">
           <h3>Search Results</h3>
@@ -12,7 +11,7 @@ const SearchResult = props => {
       </div>
     </div>
   ) : (
-      <div className="card">
+      <div className="card border-0">
         <div className="card-body player">
           <div className="article">
             <h3>Search Results</h3>

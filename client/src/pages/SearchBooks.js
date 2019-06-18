@@ -22,7 +22,6 @@ class SearchBooks extends Component {
     //function to control the submit button of the search form 
     handleFormSubmit = event => {
         event.preventDefault();
-        // once it clicks it connects to the google book api with the search value
         API.getGoogleSearchBooks(this.state.search)
             .then(res => {
                 if (res.data.items === "error") {
@@ -57,7 +56,6 @@ class SearchBooks extends Component {
         event.preventDefault();
         console.log(this.state.books)
         let savedBooks = this.state.books.filter(book => book.id === event.target.id)
-        savedBooks = savedBooks[0];
         API.saveBook(savedBooks)
             .then(this.setState({ message: alert("Your book is saved") }))
             .catch(err => console.log(err))
@@ -75,7 +73,7 @@ class SearchBooks extends Component {
                         </Col>
                     </Row>
                 </Container>
-                <br></br>
+               
                 <Container>
                     <SearchResult books={this.state.books} handleSavedButton={this.handleSavedButton} />
                 </Container>
