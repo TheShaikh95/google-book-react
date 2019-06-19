@@ -8,7 +8,7 @@ const SearchResult = props => {
       <h3>Search Results</h3>
       {props.books.map(book => {
         return (
-          <div className="card mb-2">
+          <div className="card mb-5">
             <div className="card-body">
               <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
                 <Col size="2">
