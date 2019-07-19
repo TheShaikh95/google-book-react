@@ -2,11 +2,12 @@
 A React-based Google Books Search app using Node.js, Express and MongoDB.
 
 ## Website
-
 https://still-escarpment-24547.herokuapp.com/
 
-## Technology
+## Homework Instructions
+[Homework Details](homework_instructions.md)
 
+## Technology
 * React
 * ES6
 * JSX
